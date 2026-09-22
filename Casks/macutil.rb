@@ -2,7 +2,7 @@ cask "macutil" do
   version "0.1.1"
   sha256 "0387bb863dd0098b4edc83fd9477c28c05ab6d63647ee8fa5330cd5e0f0da994"
 
-  url "https://github.com/FixerHack/MacUtil/releases/download/v#{version}/MacUtil-#{version}.dmg"
+  url "https://github.com/FixerHack/MacUtil/releases/download/v#{version}/MacUtil-#{version}.zip"
   name "MacUtil"
   desc "Cleaner, optimizer and security analyzer"
   homepage "https://github.com/FixerHack/MacUtil"
@@ -12,6 +12,8 @@ cask "macutil" do
     strategy :github_latest
   end
 
+  # MacUtil updates itself from its GitHub releases.
+  auto_updates true
   depends_on macos: :sonoma
 
   app "MacUtil.app"
@@ -27,6 +29,7 @@ cask "macutil" do
 
   caveats <<~EOS
     MacUtil is not notarized by Apple, so macOS blocks the first launch.
+    Later updates install themselves from inside MacUtil, without this step.
     Open it once, then: System Settings → Privacy & Security → Open Anyway.
     Or run:
       xattr -dr com.apple.quarantine #{appdir}/MacUtil.app
