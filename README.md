@@ -4,10 +4,11 @@
 optimizer and security analyzer.
 
 ```bash
-brew install --cask fixerhack/macutil/macutil
+brew tap fixerhack/macutil
+brew install macutil
 ```
 
-Update with `brew upgrade --cask macutil`, remove with `brew uninstall --cask macutil`
+Update with `brew upgrade macutil`, remove with `brew uninstall macutil`
 (add `--zap` to also delete its settings and history).
 
 The app is not notarized by Apple. See
