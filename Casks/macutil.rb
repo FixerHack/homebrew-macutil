@@ -1,6 +1,6 @@
 cask "macutil" do
   version "0.1.0"
-  sha256 "a8b54a4b96f3f7e1b9baa0b08f8e67b745ad4a7d3b9ddc2d2c5fec4646d7951e"
+  sha256 "62629878c93aa5451e98cd4b086c29214a3c81d12caeb2056b57ea9492f3f54d"
 
   url "https://github.com/FixerHack/MacUtil/releases/download/v#{version}/MacUtil-#{version}.dmg"
   name "MacUtil"
